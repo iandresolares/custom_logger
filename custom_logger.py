@@ -20,7 +20,9 @@ try:
     config_file_path = os.environ["CONFIG_FILE_PATH"]
     logger_settings = read_config(config_file_path)["logger"]
 except KeyError:
-    logger_settings = read_config("default_config.yaml")["logger"]
+    logger_settings = read_config("./custom_logger/default_config.yaml")["logger"]
+except FileNotFoundError:
+    logger_settings = read_config("./default_config.yaml")["logger"]
 
 
 _logging_levels = {

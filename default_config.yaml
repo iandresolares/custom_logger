@@ -1,0 +1,7 @@
+logger:
+  level: debug
+  terminal_logging: True
+  file_logging: True
+  file_path: ./logs.log
+  independent_file_error_logging: True
+  file_error_logging: ./errors.log
